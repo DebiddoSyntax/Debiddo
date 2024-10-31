@@ -9,7 +9,7 @@ import About from './about';
 const App = () => {
   return (
     <Router>
-        <div className='bg-[#141313] text-white'>
+        <div className='bg-[#141313] text-white overscroll-none'>
         <Navbar />
           <Routes>
             <Route path='/' element={<Home />}></Route>
