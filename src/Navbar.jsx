@@ -19,7 +19,7 @@ const Navbar = () => {
   }; 
 
   return (
-    <div className='fixed w-full'>
+    <div className='fixed w-full z-10'>
         <header>
           <nav  className='flex justify-between h-20 w-full bg-[#252121] px-5 md:px-10 lg:px-20 text-white items-center border-b-2'>
             <Link to="/"><h1 className='font-lilita font-normal text-xl md:text-2xl'>DEBIDDOSYNTAX</h1> </Link> 
