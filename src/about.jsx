@@ -48,11 +48,11 @@ const About = () => {
                 </div>
                 <div className={`bg-primary px-5 md:px-8 lg:px-10 pt-16 md:pt-20 lg:pt-28 pb-5 md:pb-8 rounded-sm delay-800ms duration-1000 ease-in-out ${Hobbies3RefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={Hobbies3Ref}>
                     <h5 className='text-2xl font-bold text-[#232026]'>FOOTBALL</h5>
-                    <p className='text-lg font-normal italic text-white mt-3'>Football is my game—whether watching or playing, I’m all in.</p>
+                    <p className='text-lg font-normal italic text-white mt-3'>Football is my game, whether watching or playing, I’m all in.</p>
                 </div>
                 <div className={`bg-primary px-5 md:px-8 lg:px-10 pt-16 md:pt-20 lg:pt-28 pb-5 md:pb-8 rounded-sm delay-800ms duration-1000 ease-in-out ${Hobbies4RefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={Hobbies4Ref}>
-                    <h5 className='text-2xl font-bold text-[#232026]'>FOOTBALL</h5>
-                    <p className='text-lg font-normal italic text-white mt-3'>Football is my game—whether watching or playing, I’m all in.</p>
+                    <h5 className='text-2xl font-bold text-[#232026]'>FITNESS</h5>
+                    <p className='text-lg font-normal italic text-white mt-3'>I love going to the gym whenever I can.</p>
                 </div>
             </div>
         </div>
