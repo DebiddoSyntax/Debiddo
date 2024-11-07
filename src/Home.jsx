@@ -35,7 +35,7 @@ const Home = () => {
     <div>
         <div className='px-5 md:px-10 lg:px-20 pt-20 pb-0 md:pb-5 mb-20'>
             <div className={`py-14 md:py-20 delay-800ms duration-1000 ease-in-out ${WelcomeRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} ref={WelcomeRef}>
-                <h1 className='text-2xl md:text-3xl lg:4xl font-medium w-full lg:w-[70%] leading-10 md:leading-[56px]'>Hey! welcome to <span className='font-bold text-primary'>DebiddoSyntax.</span> Bringing Visions to Life with Design & Development Magic.</h1>
+                <h1 className='text-2xl md:text-3xl font-medium w-full lg:w-[70%] leading-10 md:leading-[56px]'>Hey! welcome to <span className='font-bold text-primary'>DebiddoSyntax.</span> Bringing Visions to Life with Design & Development Magic.</h1>
             </div>
 
             <div className={`mt-16 md:mt-24 lg:mt-32 mb-16 md:mb-24 delay-800ms duration-1000 ease-in-out ${FeaturedRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} ref={FeaturedRef}>
@@ -44,12 +44,12 @@ const Home = () => {
 
             <div className={`bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto delay-800ms duration-1000 ease-in-out ${CrowdHelpRefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={CrowdHelpRef} onClick={() => window.open('https://www.behance.net/gallery/211811185/CrowdHelp-Mobile-App', '_blank')}>
                 <img src={crowdhelp} alt="crowdhelp" className='w-full h-full object-cover '/>
-                <div className='flex justify-between items-center mt-5'><p className='text-black text-lg md:xl lg:text-2xl font-semibold'></p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
+                <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>CrowdHelp</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
             </div>
             <Link to="/hashtags">
             <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${HashtagsERefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsERef}>
                 <img src={Hashtags} alt="crowdhelp" className='w-full h-full object-cover '/>
-                <div className='flex justify-between items-center mt-5'><p className='text-black text-lg md:xl lg:text-2xl font-semibold'></p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
+                <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Hashtags Merch</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
             </div>
             </Link>
 
