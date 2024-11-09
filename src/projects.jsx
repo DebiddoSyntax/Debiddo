@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
-import crowdhelp from '../src/assets/Crowdhelp.png'
-import HashtagSneaker from '../src/assets/HashtagsSneaker.png'
-import Cryptofolio from '../src/assets/Cryptofolio.png'
-import Hashtags from '../src/assets/Hashtags.png'
+import crowdhelp from '../src/assets/Crowdhelp.webp'
+import HashtagSneaker from '../src/assets/HashtagsSneaker.webp'
+import Cryptofolio from '../src/assets/Cryptofolio.webp'
+import Hashtags from '../src/assets/Hashtags.webp'
 import { FiExternalLink } from "react-icons/fi";
 import { Link, useLocation } from 'react-router-dom';
 import { useIsVisible } from 'react-is-visible'

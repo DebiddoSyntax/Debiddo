@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from 'react'
-import crowdhelp from '../src/assets/Crowdhelp.png'
+import React, { useEffect, useRef, useState } from 'react'
+import crowdhelp from '../src/assets/Crowdhelp.webp'
 import { FiExternalLink } from "react-icons/fi";
 import { HiOutlineArrowDownTray } from "react-icons/hi2";
 import Skills from './Skills';
 import { Link, useLocation } from 'react-router-dom';
 import { useIsVisible } from 'react-is-visible'
-import Hashtags from '../src/assets/Hashtags.png'
+import Hashtags from '../src/assets/Hashtags.webp'
 // import Particles from '../src/particlesJS/particles'
 // import SplineBG from './particlesJS/SplineBG.js'
 
@@ -27,6 +27,7 @@ const Home = () => {
     const HashtagsERef = useRef()
     const HashtagsERefisVisible = useIsVisible(HashtagsERef, { once: true })
 
+  
    
 
 
@@ -43,7 +44,7 @@ const Home = () => {
             </div>
 
             <div className={`bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto delay-800ms duration-1000 ease-in-out ${CrowdHelpRefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={CrowdHelpRef} onClick={() => window.open('https://www.behance.net/gallery/211811185/CrowdHelp-Mobile-App', '_blank')}>
-                <img src={crowdhelp} alt="crowdhelp" className='w-full h-full object-cover '/>
+                <img src={crowdhelp} alt="crowdhelp" className='w-full h-full object-cover'/>
                 <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>CrowdHelp</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
             </div>
             <Link to="/hashtags">
