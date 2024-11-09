@@ -10,7 +10,7 @@ import Hashtags from './Hashtags';
 const App = () => {
   return (
     <Router>
-        <div className='bg-[#141313] text-white overscroll-none'>
+        <div className='bg-[#141313] text-white'>
         <Navbar />
           <Routes>
             <Route path='/' element={<Home />}></Route>
