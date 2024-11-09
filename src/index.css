@@ -8,5 +8,7 @@
 
 body {
   @apply font-spline
+  overflow-hidden;
+  overscroll-behavior: none;
 }
 
