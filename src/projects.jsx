@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import crowdhelp from '../src/assets/Crowdhelp.webp'
 import HashtagSneaker from '../src/assets/HashtagsSneaker.webp'
 import Cryptofolio from '../src/assets/Cryptofolio.webp'
@@ -32,6 +32,11 @@ const Projects = () => {
     const HashtagsRefisVisible = useIsVisible(HashtagsRef, { once: true })
     const HashtagsERefisVisible = useIsVisible(HashtagsERef, { once: true })
 
+    const [crowdhelpLoaded, setCrowdhelpLoaded] = useState(false)
+    const [cryptoFolioLoaded, setCryptoFolioLoaded] = useState(false)
+    const [hashtagsLoaded, setHashtagsLoaded] = useState(false)
+    const [hashtagsELoaded, setHashtagsELoaded] = useState(false)
+
 
     
     
@@ -49,18 +54,18 @@ const Projects = () => {
             <h1 className='text-[40px] md:text-[64px] lg:text-[80px] font-rubik text-primary font-extrabold'>DESIGN</h1>
         </div>
 
-        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${CrowdHelpRefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={CrowdHelpRef} onClick={() => window.open('https://www.behance.net/gallery/211811185/CrowdHelp-Mobile-App', '_blank')}>
-            <img src={crowdhelp} alt="crowdhelp" className='w-full h-full object-cover '/>
+        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${CrowdHelpRefisVisible && crowdhelpLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={CrowdHelpRef} onClick={() => window.open('https://www.behance.net/gallery/211811185/CrowdHelp-Mobile-App', '_blank')}>
+            <img src={crowdhelp} alt="crowdhelp" className='w-full h-full object-cover ' onLoad={()=> setCrowdhelpLoaded(true)}/>
             <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>CrowdHelp</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
         </div>
 
-        <div className={`bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto duration-1000 delay-75 ease-in-out ${CryptoFRefisVisible  ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={CryptoFRef} onClick={() => window.open('https://www.behance.net/gallery/143681909/Web3-case-study-%28CryptoFolio-Web-app%29', '_blank')}>
-            <img src={Cryptofolio} alt="crowdhelp" className='w-full h-full object-cover '/>
+        <div className={`bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto duration-1000 delay-75 ease-in-out ${CryptoFRefisVisible && cryptoFolioLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={CryptoFRef} onClick={() => window.open('https://www.behance.net/gallery/143681909/Web3-case-study-%28CryptoFolio-Web-app%29', '_blank')}>
+            <img src={Cryptofolio} alt="cryptofolio" className='w-full h-full object-cover ' onLoad={()=> setCryptoFolioLoaded(true)}/>
             <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>CryptoFolio</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
         </div>
 
-        <div className={`bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto duration-1000 delay-75 ease-in-out ${HashtagsRefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsRef} onClick={() => window.open('https://www.behance.net/gallery/138711137/Sneaker-store-mobile-app-UX-case-study', '_blank')}>
-            <img src={HashtagSneaker} alt="crowdhelp" className='w-full h-full object-cover '/>
+        <div className={`bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto duration-1000 delay-75 ease-in-out ${HashtagsRefisVisible && hashtagsLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsRef} onClick={() => window.open('https://www.behance.net/gallery/138711137/Sneaker-store-mobile-app-UX-case-study', '_blank')}>
+            <img src={HashtagSneaker} alt="hashtags" className='w-full h-full object-cover ' onLoad={()=> setHashtagsLoaded(true)}/>
             <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Hashtags Sneaker</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
         </div>
 
@@ -68,8 +73,8 @@ const Projects = () => {
             <h1 className='text-[40px] md:text-[64px] lg:text-[80px] font-rubik text-primary font-extrabold'>DEVELOPMENT</h1>
         </div>
         <Link to="/hashtags">
-        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${HashtagsERefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsERef}>
-            <img src={Hashtags} alt="crowdhelp" className='w-full h-full object-cover '/>
+        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${HashtagsERefisVisible && hashtagsELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsERef}>
+            <img src={Hashtags} alt="hashtagsE" className='w-full h-full object-cover ' onLoad={()=> setHashtagsELoaded(true)}/>
             <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Hashtags Merch</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
         </div>
         </Link>
