@@ -13,7 +13,7 @@ const Hashtags = () => {
     <div className='pb-0 '>
         <div className='pt-14 md:pt-20 px-5 md:px-10 lg:px-20'>
             <div className='pt-20 '>
-                <h1 className='text-2xl md:text-5xl font-bold text-center'>HASHTAGS ECOMMERCE STORE</h1>
+                <h1 className='text-2xl md:text-5xl font-bold text-center'>HASHTAGS MERCH STORE</h1>
                 <p className='mt-2 md:mt-4 text-sm md:text-lg font-normal text-center'>E-commerce website for clothing store</p>
                 <button type="button" className='mt-3 md:mt-5 px-7 md:px-10 py-3 md:py-5 text-sm md:text-lg bg-blue-700 mx-auto flex justify-between items-center rounded-sm' onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>View Live Website</button>
                 <div className='my-10 md:my-20'><ReactPlayer url={'/Video/Hashvid.mp4'} width="100%" height="20%" playing={true} loop muted={true} playsinline/></div>
