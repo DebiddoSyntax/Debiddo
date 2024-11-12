@@ -5,7 +5,7 @@ import Footer from './Footer'
 import Home from './Home'
 import Projects from './projects';
 import About from './about';
-import Hashtags from './Hashtags';
+
 
 const App = () => {
   return (
@@ -16,7 +16,6 @@ const App = () => {
             <Route path='/' element={<Home />}></Route>
             <Route path='/projects' element={<Projects />}></Route>
             <Route path='/about' element={<About />}></Route>
-            <Route path='/hashtags' element={<Hashtags />}></Route>
           </Routes>
         <Footer />
         </div>

@@ -5,7 +5,7 @@ import Cryptofolio from '../src/assets/Cryptofolio.webp'
 import Hashtags from '../src/assets/Hashtags.webp'
 import Animedeb from '../src/assets/Animedeb.webp'
 import { FiExternalLink } from "react-icons/fi";
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useIsVisible } from 'react-is-visible'
 
 
@@ -76,15 +76,13 @@ const Projects = () => {
         <div className={`mt-16 md:mt-24 mb-10 md:mb-14 duration-1000 delay-75 ease-in-out ${DevRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} ref={DevRef}>
             <h1 className='text-[40px] md:text-[64px] lg:text-[80px] font-rubik text-primary font-extrabold'>DEVELOPMENT</h1>
         </div>
-        <Link to="/hashtags">
-        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${HashtagsERefisVisible && hashtagsELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsERef}>
+        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${HashtagsERefisVisible && hashtagsELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsERef} onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>
             <img src={Hashtags} alt="hashtagsE" className='w-full h-full object-cover ' onLoad={()=> setHashtagsELoaded(true)}/>
-            <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Hashtags Merch</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
+            <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Hashtags Merch</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' >View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
         </div>
-        </Link>
-        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${AnimedebRefisVisible && animedebLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={AnimedebRef}>
+        <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${AnimedebRefisVisible && animedebLoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={AnimedebRef} onClick={() => window.open('https://animedeb.netlify.app/', '_blank')}>
             <img src={Animedeb} alt="Animedeb" className='w-full h-full object-cover ' onLoad={()=> setAnimedebLoaded(true)}/>
-            <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Animedeb</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://animedeb.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
+            <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Animedeb</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' >View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
         </div>
 
 
