@@ -5,9 +5,8 @@ import { HiOutlineArrowDownTray } from "react-icons/hi2";
 import Skills from './Skills';
 import { Link, useLocation } from 'react-router-dom';
 import { useIsVisible } from 'react-is-visible'
-import Hashtags from '../src/assets/Hashtags.webp'
-// import Particles from '../src/particlesJS/particles'
-// import SplineBG from './particlesJS/SplineBG.js'
+import Untamed from '../src/assets/Untamed.webp'
+
 
 
 
@@ -24,10 +23,10 @@ const Home = () => {
     const WelcomeRefisVisible = useIsVisible(WelcomeRef, { once: true })
     const FeaturedRef = useRef()
     const FeaturedRefisVisible = useIsVisible(FeaturedRef, { once: true })
-    const HashtagsERef = useRef()
-    const HashtagsERefisVisible = useIsVisible(HashtagsERef, { once: true })
+    const UntamedERef = useRef()
+    const UntamedERefisVisible = useIsVisible(UntamedERef, { once: true })
 
-    const [hashtagsELoaded, setHashtagsELoaded] = useState(false)
+    const [untamedELoaded, setUntamedELoaded] = useState(false)
     const [crowdhelpLoaded, setCrowdhelpLoaded] = useState(false)
 
   
@@ -50,15 +49,14 @@ const Home = () => {
                 <img src={crowdhelp} alt="crowdhelp" className='w-full h-full object-cover ' onLoad={()=> setCrowdhelpLoaded(true)}/>
                 <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>CrowdHelp</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]'>View on Behance <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
             </div>
-            <Link to="/hashtags">
-            <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${HashtagsERefisVisible && hashtagsELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={HashtagsERef}>
-                <img src={Hashtags} alt="hashtagsE" className='w-full h-full object-cover ' onLoad={()=> setHashtagsELoaded(true)}/>
-                <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Hashtags Merch</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://hashtagsmerch.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
+        
+            <div className={`delay-800ms duration-1000 ease-in-out bg-[#d9d9d9] mt-10 md:mt-20 lg:mt-28 p-5 md:px-8 lg:px-10 pt-8 md:pt-10 lg:pt-14 pb-5 md:pb-8 lg:pb-10 rounded-sm md:rounded-xl cursor-pointer h-auto ${UntamedERefisVisible && untamedELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={UntamedERef}>
+                <img src={Untamed} alt="UntamedE" className='w-full h-full object-cover ' onLoad={()=> setUntamedELoaded(true)}/>
+                <div className='flex justify-between items-center mt-5'><p className='text-[#1f1b1b] text-lg md:text-xl lg:text-2xl font-semibold'>Untamed Check</p><button className='flex text-sm md:text-lg items-center px-5 py-3 md:px-8 lg:px-10 md:py-4 lg:py-5 bg-primary hover:bg-[#46256A]' onClick={() => window.open('https://untamedcheck.netlify.app/', '_blank')}>View Live Website <span className='mx-1 md:mx-3'><FiExternalLink /></span></button></div>
             </div>
-            </Link>
 
             <div className='my-20 text-center'>
-                <Link to="/projects"><button className={`bg-primary hover:bg-[#46256A] text-lg font-medium py-4 px-14 rounded-sm delay-800ms duration-1000 ease-in-out ${hashtagsELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>View all projects</button></Link>
+                <Link to="/projects"><button className={`bg-primary hover:bg-[#46256A] text-lg font-medium py-4 px-14 rounded-sm delay-800ms duration-1000 ease-in-out ${untamedELoaded ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`}>View all projects</button></Link>
             </div>
         </div>
 
