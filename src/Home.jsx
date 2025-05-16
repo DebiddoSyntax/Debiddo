@@ -62,7 +62,7 @@ const Home = () => {
 
         <Skills />
         <div className='flex justify-between items-center w-full mt-10 py-40'>
-            <button className='flex justify-between items-center text-center mx-auto py-4 px-14 rounded-sm bg-primary hover:bg-[#46256A] text-lg md:text-lg font-semibold' onClick={() => window.open('https://drive.google.com/file/d/11RU5FeJcCKg62IoIR6tzeJVU_32ElENk/view?usp=sharing', '_blank')}>My Resume <HiOutlineArrowDownTray className='ml-3 mr-0 text-xl stroke-[3px]' /></button>
+            <button className='flex justify-between items-center text-center mx-auto py-4 px-14 rounded-sm bg-primary hover:bg-[#46256A] text-lg md:text-lg font-semibold' onClick={() => window.open('https://drive.google.com/file/d/1wqaYfeS1Jubo00epEsf6WBpsuAsF_APm/view?usp=drive_link', '_blank')}>My Resume <HiOutlineArrowDownTray className='ml-3 mr-0 text-xl stroke-[3px]' /></button>
         </div>
     </div>
   )
