@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { FiExternalLink } from "react-icons/fi";
 
@@ -7,7 +6,7 @@ const Footer = () => {
     <div className='bg-[#252121] pt-14 md:pt-20 pb-3 h-auto overflow-hidden' >
         <div className='px-5 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-3 mb-10 '>
              <div className='col-span-2'>
-                <Link to="/"><h1 className='font-lilita font-normal text-xl md:text-2xl'>DEBIDDOSYNTAX</h1> </Link> 
+                <Link to="/"><h1 className='font-lilita font-normal text-xl md:text-2xl'>DEBIDDO</h1> </Link> 
             </div>
             <div className='flex w-full items-start mt-5 md:mt-0'>
                 <ul className='mx-0 md:mx-0 lg:mx-10 mt-5 md:mt-0 text-sm md:text-lg'>

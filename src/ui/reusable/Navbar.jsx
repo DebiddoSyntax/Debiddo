@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { HiOutlineX, HiOutlineMenuAlt3, HiChevronRight } from "react-icons/hi";
 

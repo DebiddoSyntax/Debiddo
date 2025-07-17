@@ -1,9 +1,9 @@
-import React, { useRef } from 'react'
-import css from '../src/assets/icons/css.png'
-import react from '../src/assets/icons/react.png'
-import html from '../src/assets/icons/html.png'
-import figma from '../src/assets/icons/figma.png'
-import javascript from '../src/assets/icons/javascrript.png'
+import { useRef } from 'react'
+import css from '../../../src/assets/icons/css.png'
+import react from '../../../src/assets/icons/react.png'
+import html from '../../../src/assets/icons/html.png'
+import figma from '../../../src/assets/icons/figma.png'
+import javascript from '../../../src/assets/icons/javascrript.png'
 import { useIsVisible } from 'react-is-visible'
 
 
