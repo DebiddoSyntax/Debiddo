@@ -43,7 +43,7 @@ const About = () => {
             <div className='mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-10 '>
                 <div className={`w-full bg-primary px-4 md:px-5 lg:px-8 pt-16 md:pt-20 lg:pt-28 pb-5 md:pb-8 rounded-sm delay-800ms duration-1000 ease-in-out ${Hobbies1RefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={Hobbies1Ref}>
                     <h5 className='text-2xl font-bold text-[#232026]'>ANIME</h5>
-                    <p className='text-lg font-normal italic text-white mt-3'>I’m fluent in subtitles, my favorite anime is One Piece</p>
+                    <p className='text-lg font-normal italic text-white mt-3'>Watching anime is one of my favourite things to do with my free time, my favorite anime is One Piece</p>
                 </div>
                 <div className={`bg-primary px-4 md:px-5 lg:px-8 pt-16 md:pt-20 lg:pt-28 pb-5 md:pb-8 rounded-sm delay-800ms duration-1000 ease-in-out ${Hobbies2RefisVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-20'}`} ref={Hobbies2Ref}>
                     <h5 className='text-2xl font-bold text-[#232026]'>GAMING</h5>
