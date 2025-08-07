@@ -37,7 +37,7 @@ function Contact() {
   
         try{
             setIsLoading(true)
-            const response = await emailjs.send( 
+            await emailjs.send( 
                 service_id, template_id,
                 {
                     first_name: data.first_name,
@@ -48,7 +48,7 @@ function Contact() {
                 public_key
             )
 
-            console.log(response)
+            // console.log(response)
             // if(response.status == true)
             setEmailSent(true)
         }catch(err){
@@ -137,6 +137,8 @@ function Contact() {
                                 {errors.message?.message && String(errors.message.message)}
                             </p>
                         </div>
+
+                         {error && <p className="mt-5 text-red-500 text-sm text-center">{error}</p>}
 
                         <button type='submit' disabled={loading} className='mt-10 mx-auto bg-primary w-full py-4 rounded-md text-sm md:text-base text-center font-semibold text-white hover:bg-primary cursor-pointer'>
                             {loading ? "Submiting...." : "Submit Form"}
