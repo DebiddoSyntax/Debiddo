@@ -153,7 +153,7 @@ function Contact() {
                                 Sent
                             </h3>
                             <p className="mt-5 text-base text-gray-200 w-full">
-                                Thank you for contacting us, we will get back to you soon.
+                                Thank you for contacting me, I will get back to you soon.
                             </p>
                             <FaSquareCheck className='mt-5 text-primary text-4xl md:text-5xl mx-auto'/>
                         </div>
