@@ -1,70 +1,161 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+'use client'
+import { useEffect, useState } from 'react'
+import Link from 'next/link';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
+import { MdLightMode } from "react-icons/md";
+import { MdDarkMode } from "react-icons/md";
 import { HiOutlineX, HiOutlineMenuAlt3, HiChevronRight } from "react-icons/hi";
-import Logo from '../../assets/Logo.png'
+import { useDarkMode } from '@/functions/DarkModeContext';
 
 
 
 const Navbar = () => {
 
-  const [nav, setNav] = useState(false); 
-  const handleNav = () => {
-        setNav(!nav);
-      };
+	const pathname = usePathname()
+	const { isDarkMode, toggleDarkMode } = useDarkMode()
+	const [mounted, setMounted] = useState(false);
+	const [nav, setNav] = useState(false); 
 
-  const location = useLocation()
+	const handleNav = () => { 
+		setNav(!nav);
+	};
+
+	// nav scroll behaviour 
+	const [navbarScroll, setNavbarScroll] = useState(false);
 
 
-  const getLinkClass = (path) => {
-    return location.pathname === path 
-      ? 'text-primary' 
-      : 'hover:text-primary'; 
-  }; 
+	//  effect for scroll event listerner 
+	useEffect(() => {
+		const handleNavScroll = () => {
+			if(window.scrollY <= 80) {
+				setNavbarScroll(false)
+			} else {
+				setNavbarScroll(true)
+			}
+		}
 
-  return (
-    <div className='fixed w-full z-10'>
-        <header>
-          <nav  className='flex justify-between h-20 w-full bg-[#252121] px-5 md:px-10 lg:px-20 text-white items-center border-b-2'>
-            {/* <Link to="/"><h1 className='font-lilita font-semibold text-xl md:text-2xl'>DEBIDDO</h1> </Link>  */}
-            <div className='h-7 md:h-8'>
-              <Link to="/"><img className="w-full h-full object-contain" src={Logo} alt="Logo" /></Link>
-            </div>
-            <ul className='flex justify-between items-center'>
-              <Link to="/projects"><li className={`hidden md:flex text-lg mx-5 p-3 cursor-pointer ${getLinkClass('/projects')}`}>Projects</li></Link>
-              <Link to="/about"><li className={`hidden md:flex text-lg mx-5 p-3 cursor-pointer ${getLinkClass('/about')}`}>About</li></Link>
-              <Link to={'/contact'}>
-                <button className='ml-5 mr-0 text-sm px-5 md:px-8 lg:px-10 py-3 bg-primary hover:bg-[#46256A] rounded-sm font-semibold' 
-                  // onClick={()=> window.location.href='mailto:debiddosyntax@gmail.com?subject=Hello&body=Your%20message%20here'}
-                >
-                  Contact
-                </button>
-              </Link>
-              <div className='flex text-2xl items-center ml-3 mr-0 md:hidden' onClick={handleNav}>
-                {nav ? <div className='text-[26px] stroke-2 hover:text-blue-700'><HiOutlineX /></div> : <div className='text-[26px] stroke-2 hover:text-blue-700'><HiOutlineMenuAlt3 /></div>}
-            </div>
-            </ul>
+		handleNavScroll();
+		window.addEventListener('scroll', handleNavScroll);
+		return () => window.removeEventListener('scroll', handleNavScroll);
+	}, []);
 
-            
-          </nav>
 
-         
 
-            <div className={nav ? 'z-5 fixed top-[80px] w-full h-[100%] bg-[#04010A] p-4 shadow-xl ease-in-out duration-800 md:hidden' : 'fixed top-[-100%]'}>
-              <ul className='py-4  bg-[#252121]'>
-                <li className='p-5'>
-                  <Link to="/" className='flex items-center justify-between hover:text-primary' onClick={handleNav}>HOME <span className='text-xl'><HiChevronRight /></span></Link>
-                </li>
-                <li className='p-5'>
-                  <Link to="/projects" className='flex items-center justify-between hover:text-primary' onClick={handleNav}>PROJECTS <span className='text-xl'><HiChevronRight /></span></Link>
-                </li>
-                <li className='p-5'>
-                  <Link to="/about" className='flex items-center justify-between hover:text-primary' onClick={handleNav}>ABOUT<span className='text-xl'><HiChevronRight /></span></Link>
-                </li>
-              </ul>
-          </div>
-        </header>
-    </div>
-  )
+	useEffect(() => {
+		setMounted(true);
+	}, []);
+
+
+	const LogoSRC = () => {
+		if (mounted && isDarkMode) {
+			return '/LogoWhite.png';
+		} else {
+			return '/LogoBlack.png';
+		}
+	};
+
+	const getLinkClass = (path) => {
+		return pathname === path 
+		? 'text-primary' 
+		: 'hover:text-primary'; 
+	}; 
+
+	return (
+		<div className='fixed w-full z-10'>
+			<header>
+				<nav  className={`flex justify-between h-20 w-full bg-navbar-background px-5 md:px-10 lg:px-20 items-center border-b-0 ${navbarScroll && 'shadow-lg'}`}>
+					<div className='h-7 md:h-8'>
+						<Link href="/">
+							<Image className="w-full h-full object-contain" height={200} width={200} src={LogoSRC()} alt="Logo" />
+						</Link>
+					</div>
+
+					<ul className='flex justify-between items-center'>
+						<div className={`flex text-2xl items-center bg-background p-2 mx-2 rounded-full cursor-pointer`} 
+							onClick={toggleDarkMode}
+						>
+							{isDarkMode && mounted ? (
+								<div className='text-base stroke-2 hover:text-primary cursor-pointer'>
+									<MdDarkMode />
+								</div>
+							) : (
+								<div className='text-base stroke-2 hover:text-primary cursor-pointer'>
+									<MdLightMode />
+								</div>
+							)}
+						</div>
+
+						<li className={`hidden md:flex text-lg mx-5 p-3 cursor-pointer ${getLinkClass('/projects')}`}>
+							<Link href="/projects">
+								Projects
+							</Link>
+						</li>
+
+						<li className={`hidden md:flex text-lg mx-5 p-3 cursor-pointer ${getLinkClass('/about')}`}>
+							<Link href="/about">
+								About
+							</Link>
+						</li>
+
+						<Link href={'/contact'}>
+							<button className='ml-5 mr-0 text-sm px-5 md:px-8 lg:px-10 py-3 bg-primary text-white hover:bg-hoverprimary rounded-sm font-semibold cursor-pointer'>
+									Contact
+							</button>
+						</Link>
+
+						<div className='flex text-2xl items-center ml-3 mr-0 md:hidden' onClick={handleNav}>
+							{nav ? (
+								<div className='text-[26px] stroke-2 hover:text-primary cursor-pointer'>
+									<HiOutlineX />
+								</div>
+							) : (
+								<div className='text-[26px] stroke-2 hover:text-primary cursor-pointer'>
+									<HiOutlineMenuAlt3 />
+								</div>
+							)}
+						</div>
+					</ul>	
+				</nav>
+
+				
+
+				{/* {nav && ( */}
+					<div className={`${nav ? 'z-5 fixed w-full h-auto top-20 bg-background p-4 shadow-2xl ease-in-out duration-800 md:hidden' : 'hidden fixed -top-full'}`}>
+						<ul className='flex flex-col justify-center'>
+							<li className='p-5 text-center'>
+								<Link href="/" className=' hover:text-primary w-auto' onClick={handleNav}>
+									Home 
+									{/* <span className='text-xl'>
+										<HiChevronRight />
+									</span> */}
+								</Link>
+							</li>
+
+							<li className='p-5 text-center'>
+								<Link href="/projects" className=' hover:text-primary' onClick={handleNav}>
+									Projects
+									{/* <span className='text-xl'>
+										<HiChevronRight />
+									</span> */}
+								</Link>
+							</li>
+
+							<li className='p-5 text-center'>
+								<Link href="/about" className=' hover:text-primary' onClick={handleNav}>
+									About
+									{/* <span className='text-xl'>
+										<HiChevronRight />
+									</span> */}
+								</Link>
+							</li>
+
+						</ul>
+					</div>
+				{/* )} */}
+			</header>
+		</div>
+	)
 }
 
 export default Navbar
