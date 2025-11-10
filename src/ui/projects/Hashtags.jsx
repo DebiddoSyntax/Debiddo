@@ -14,7 +14,11 @@ function Hashtags() {
                     <h1 className='mt-14 md:mt-16 xl:mt-20 text-xl md:text-2xl xl:text-3xl font-semibold leading-7 md:leading-8 xl:leading-12 font-clashdisplay w-full 2xl:w-[80%] mx-auto text-center'>
                         <span className='text-blue-700'>Hashtags Merch,</span> a clothing brand website with an admin dashboard for shopping streetwear and managing products, inventory, and orders.
                     </h1>
-                    <button className='rounded-xs font-semibold text-xs md:text-sm cursor-pointer px-4 md:px-5 py-4 md:py-5 text-white bg-blue-700 text-center mx-auto'>View live website</button>
+                    <button className='rounded-xs font-semibold text-xs md:text-sm cursor-pointer px-4 md:px-5 py-4 md:py-5 text-white bg-blue-700 text-center mx-auto'
+                        onClick={() => window.open('https://hashtagsmerch.vercel.app/', '_blank')}
+                    >
+                        View live website
+                    </button>
                     <div className={`delay-800ms duration-1000 ease-in-out bg-image-background mt-5 md:mt-8 px-3 py-5 md:py-8 md:px-8 rounded-sm md:rounded-xl h-auto w-full mx-auto`}>
                         <Image
                             src={HashtagsMerch}

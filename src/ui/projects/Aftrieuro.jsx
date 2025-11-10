@@ -13,7 +13,9 @@ function Aftrieuro() {
                     <span className='text-blue-700'>Aftrieuro,</span> a booking consultation platform that connects companies to Aftrieuro Dynamics' network of professional consultants.
                     {/* <span className='text-blue-700'>Aftrieuro,</span> a booking consultation platform that helps companies and businesses expand their operations into international markets, with a focus on Africa and Europe. */}
                 </h1>
-                <button className='rounded-xs font-semibold text-xs md:text-sm cursor-pointer px-4 md:px-5 py-4 md:py-5 text-white bg-blue-700 text-center mx-auto'>
+                <button className='rounded-xs font-semibold text-xs md:text-sm cursor-pointer px-4 md:px-5 py-4 md:py-5 text-white bg-blue-700 text-center mx-auto'
+                    onClick={() => window.open('https://aftrieurodynamics.com/', '_blank')}
+                >
                     View live website
                 </button>
                 <div className={`delay-800ms duration-1000 ease-in-out bg-image-background mt-5 md:mt-8 px-3 py-5 md:py-8 md:px-8 rounded-sm md:rounded-xl h-auto w-full mx-auto`}>
