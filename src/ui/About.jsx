@@ -59,11 +59,11 @@ const About = () => {
         {
             name: 'Hashtags Merch',
             icon: hashtagsLogo,
-            period: 'July, 2025 - Sept, 2025',
+            period: 'August, 2025 - Nov, 2025',
             text: `
                 I led the end-to-end design and development of the Hashtags clothing brand website and admin dashboard as a full-stack developer. 
                 Using React.js, Tailwind CSS, and a custom backend, I built reusable components and core e-commerce features like product display, search, filtering, and cart management with the React Context API. 
-                I also developed backend logic for product, inventory, and order management, ensuring secure data flow and efficient performance across the platform.
+                I also integrated the backend api for product, inventory, and order management, ensuring secure data flow and efficient performance across the platform.
             `
         },
 
@@ -116,7 +116,7 @@ const About = () => {
                             Experience
                         </h5>
                         <div className='flex items-center gap-2 hover:text-hoverprimary text-base md:text-base font-semibold cursor-pointer'
-                            onClick={() => window.open('https://drive.google.com/file/d/1LjZlBRrozfplZm_leH7jH0wajzTJCPcJ/view?usp=drive_link', '_blank')}
+                            onClick={() => window.open('https://drive.google.com/file/d/1kECb1PUMFsCDkbNH-GYr68rjtDtjeJOd/view?usp=sharing', '_blank')}
                         >
                             <p>resume</p>
                             <LiaExternalLinkAltSolid />

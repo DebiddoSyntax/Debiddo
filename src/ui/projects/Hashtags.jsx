@@ -130,12 +130,12 @@ function Hashtags() {
                     <div className='mt-5'>
                         <p className='mt-1 text-sm md:text-base xl:text-lg font-semibold xl:font-medium text-portfoliotext-lower leading-7 md:leading-8 xl:leading-8'>
                             Building Hashtags taught me how to balance visual design with practical functionality. 
-                            I learned how important it is to create a smooth shopping flow that feels intuitive while keeping the backend simple for the brand to manage.
-                            Working on both the storefront and the admin dashboard helped me understand how user experience and admin efficiency are connected and how every change on one side affects the other. 
+                            I learned how important it is to create a smooth shopping flow that feels intuitive while keeping the operation simple for the brand to manage.
+                            Working on both the storefront and the admin dashboard helped me understand how user's experience and admin efficiency are connected and how every change on one side affects the other. 
                             It also improved my skills in structuring product data, handling inventory logic, and designing responsive layouts that look great on any device.
                         </p>
                         <p className='mt-5 text-sm md:text-base xl:text-lg font-semibold xl:font-medium text-portfoliotext-lower leading-7 md:leading-8 xl:leading-8'>
-                            Overall, the project reinforced the value of clean design, efficient data flow, and thoughtful user interactions in building a complete e-commerce experience.
+                            Finally, the project reinforced the value of clean design, efficient data flow, and thoughtful user interactions in building a complete e-commerce experience.
                         </p>
                     </div>
                 </div>

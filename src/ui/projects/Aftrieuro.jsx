@@ -66,7 +66,7 @@ function Aftrieuro() {
                     RESEARCH
                 </h2>
                 <p className='mt-1 text-sm md:text-base xl:text-lg font-semibold xl:font-medium text-portfoliotext-lower leading-7 md:leading-8 xl:leading-8'>
-                    The product research for Aftrieuro focused on understanding how users interact with digital consultation platforms and identifying the most effective ways to connect businesses with expert consultants in real time. 
+                    The product research for Aftrieuro focused on understanding how users interact with digital consultation platforms and identifying the most effective ways to connect businesses with Aftrieuro expert consultant in real time. 
                     Since the platform centers on booking consultations and facilitating direct communication, the research explored user expectations around usability, trust, and engagement. The key findings included:
                 </p>
 
@@ -115,9 +115,7 @@ function Aftrieuro() {
                     <p className='mt-1 text-sm md:text-base xl:text-lg font-semibold xl:font-medium text-portfoliotext-lower leading-7 md:leading-8 xl:leading-8'>
                         For Aftrieuro, I designed and developed the platform’s core user experience from the consultation booking flow to the real-time chat interface. 
                         I focused on creating a smooth and intuitive process that allows users to easily schedule calls and connect with the consultant.
-                    </p>
-                    <p className='mt-5 text-sm md:text-base xl:text-lg font-semibold xl:font-medium text-portfoliotext-lower leading-7 md:leading-8 xl:leading-8'>
-                        On the frontend, I implemented the booking system, chat functionality, and responsive layout using modern web technologies to ensure the platform works seamlessly across devices. 
+                        I implemented the booking system, chat functionality, and responsive layout using modern web technologies to ensure the platform works seamlessly across devices. 
                         I also worked on UI design decisions such as typography, spacing, and color hierarchy to maintain a clean and professional look.
                     </p>
                 </div>

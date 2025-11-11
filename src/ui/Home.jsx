@@ -161,7 +161,7 @@ const Home = () => {
             {/* resume section  */}
             <div className='flex justify-between items-center w-full mt-0 py-20 md:py-32 xl:py-40'>
                 <button className='flex justify-between items-center text-center mx-auto py-4 px-14 rounded-sm bg-primary hover:bg-hoverprimary text-base md:text-lg text-white font-semibold cursor-pointer' 
-                    onClick={() => window.open('https://drive.google.com/file/d/1LjZlBRrozfplZm_leH7jH0wajzTJCPcJ/view?usp=drive_link', '_blank')}
+                    onClick={() => window.open('https://drive.google.com/file/d/1kECb1PUMFsCDkbNH-GYr68rjtDtjeJOd/view?usp=sharing', '_blank')}
                 >
                     My Resume 
                     <HiOutlineArrowDownTray className='ml-3 mr-0 text-xl stroke-[3px]' />

@@ -97,13 +97,17 @@ const Footer = () => {
                 
             </div>
 
-            <div className='mt-20 md:mt-32 xl:mt-56 mb-0 relative overflow-visible'>
-                <Image 
-                    src={isDarkMode ? footer : footer2} 
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[150%] h-auto object-cover" 
-                    alt="Footer" 
-                />
-            </div>
+            {mounted && (
+                <div className='mt-20 md:mt-32 xl:mt-56 mb-0 relative overflow-visible'>
+                    <Image 
+                        width={1920}
+                        height={200}
+                        src={isDarkMode ? footer : footer2} 
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[150%] h-auto object-cover" 
+                        alt="Footer" 
+                    />
+                </div>
+            )}
         </div>
     )
 }
