@@ -49,9 +49,9 @@ const Navbar = () => {
 
 	const LogoSRC = () => {
 		if (mounted && isDarkMode) {
-			return '/LogoWhite.png';
+			return '/LogoWhite.webp';
 		} else {
-			return '/LogoBlack.png';
+			return '/LogoBlack.webp';
 		}
 	};
 
@@ -64,7 +64,7 @@ const Navbar = () => {
 	return (
 		<div className='fixed w-full z-10'>
 			<header>
-				<nav  className={`flex justify-between h-20 w-full bg-navbar-background px-5 md:px-10 lg:px-20 items-center border-b-0 ${navbarScroll && 'shadow-lg'}`}>
+				<nav  className={`flex justify-between h-20 w-full bg-navbar-background px-5 md:px-10 lg:px-20 items-center border-b-0 ${navbarScroll && 'shadow-(--navbarshadow)'}`}>
 					<div className='h-7 md:h-8'>
 						<Link href="/">
 							<Image className="w-full h-full object-contain" height={200} width={200} src={LogoSRC()} alt="Logo" />
@@ -121,7 +121,7 @@ const Navbar = () => {
 				
 
 				{/* {nav && ( */}
-					<div className={`${nav ? 'z-5 fixed w-full h-auto top-20 bg-background p-4 shadow-2xl ease-in-out duration-800 md:hidden' : 'hidden fixed -top-full'}`}>
+					<div className={`${nav ? 'z-5 fixed w-full h-auto top-20 bg-background p-4 shadow-(--navbarshadow) ease-in-out duration-800 md:hidden' : 'hidden fixed -top-full'}`}>
 						<ul className='flex flex-col justify-center'>
 							<li className='p-5 text-center'>
 								<Link href="/" className=' hover:text-primary w-auto' onClick={handleNav}>

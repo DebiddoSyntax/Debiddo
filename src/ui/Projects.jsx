@@ -56,27 +56,27 @@ const Projects = () => {
     return (
         <div className='pt-10 md:pt-20 pb-52 lg:pb-80 px-5 md:px-10 lg:px-20'>
         
-            <div className={`z-5 mt-24 mb-16 md:mb-24 duration-1000 delay-75 ease-in-out 
+            {/* <div className={`z-5 mt-24 mb-16 md:mb-24 duration-1000 delay-75 ease-in-out 
                 ${ProjectsRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} 
                 ref={ProjectsRef}
             >
-                <h1 className='text-[10.3vw] sm:text-[10.3vw] md:text-[9.9vw] lg:text-[9.9vw] xl:text-[10.2vw] 2xl:text-[10.5vw] font-rubik text-bigtext font-extrabold'>
+                <h1 className='text-[1.6rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.4rem] xl:text-[5.5rem] 2xl:text-[6rem] 3xl:text-[12rem] text-center font-rubik text-bigtext font-extrabold'>
                     ALL PROJECTS
                 </h1>
-            </div>
+            </div> */}
             
 
-            <div className={`mt-16 md:mt-24 mb-10 md:mb-14 duration-1000 delay-75 ease-in-out 
+            <div className={`mt-16 md:mt-24 mb-8 md:mb-10 duration-1000 delay-75 ease-in-out 
                 ${DevRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} 
                 ref={DevRef}
             >
-                <h1 className='text-[40px] md:text-[64px] lg:text-[80px] font-rubik text-primary font-extrabold'>DEVELOPMENT</h1>
+                <h1 className='text-2xl sm:text-[40px] md:text-[56px] lg:text-[64px] font-rubik text-primary font-extrabold'>DEVELOPMENT</h1>
             </div>
 
           
 
             {/* cards  */}
-            <div className='grid grid-cols-1 xl:grid-cols-2 gap-10 md:gap-12 xl:gap-16'>
+            <div className='grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 2xl:gap-16'>
 
                 <ProjectCards 
                     IsVisibleRef={hashtagsMerchRefisVisible} 
@@ -131,11 +131,11 @@ const Projects = () => {
             </div>
 
 
-            <div className={`mt-16 md:mt-24 mb-10 md:mb-14 duration-1000 delay-75 ease-in-out 
+            <div className={`mt-16 md:mt-24 mb-8 md:mb-10 duration-1000 delay-75 ease-in-out 
                 ${DesignRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} 
                 ref={DesignRef}
             >
-                <h1 className='text-[40px] md:text-[64px] lg:text-[80px] font-rubik text-primary font-extrabold'>
+                <h1 className='text-2xl sm:text-[40px] md:text-[56px] lg:text-[64px] font-rubik text-primary font-extrabold'>
                     DESIGN
                 </h1>
             </div>

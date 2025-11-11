@@ -9,7 +9,7 @@ export default function Error({ error, reset }) {
       <p className="text-gray-600 mb-6">{error.message}</p>
       <button
         onClick={reset}
-        className="px-4 py-2 bg-blue-600 text-white rounded-md"
+        className="px-4 py-2 bg-blue-600 text-white rounded-md cursor-pointer"
       >
         Try again
       </button>

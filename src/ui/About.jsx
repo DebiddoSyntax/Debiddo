@@ -29,25 +29,25 @@ const About = () => {
     const hobbies = [
         { 
             name: 'ANIME',
-            body: 'Watching anime is one of my favourite things to do with my free time, my favorite anime is One Piece',
+            body: 'I’m a big anime fan, and One Piece is my go-to for epic adventures and laughs',
             ref: Hobbies1Ref,
             isVisible: Hobbies1RefisVisible 
         },
         { 
             name: 'GAMING',
-            body: 'I play a lot of games, my favourite is the god of war series.',
+            body: 'I love gaming, and nothing beats the epic battles of the God of War series.',
             ref: Hobbies2Ref,
             isVisible: Hobbies2RefisVisible 
         },
         { 
             name: 'FOOTBALL',
-            body: 'Football is my game, whether watching or playing, I’m all in.',
+            body: 'I live for football, playing it or watching it, I never miss a moment.',
             ref: Hobbies3Ref,
             isVisible: Hobbies3RefisVisible 
         },
         { 
             name: 'FITNESS',
-            body: 'I love going to the gym whenever I can.',
+            body: 'Going to the gym is my go-to for energy and focus whenever I get the chance.',
             ref: Hobbies4Ref,
             isVisible: Hobbies4RefisVisible 
         },
@@ -97,7 +97,7 @@ const About = () => {
                     </div>
 
                  
-                    <div className="order-1 md:order-2 col-span-1 md:col-span-1 lg:col-span-1 h-full flex flex-col justify-end w-full text-3xl md:text-4xl 2xl:text-4xl font-bold leading-11 2xl:leading-11">
+                    <div className="order-1 md:order-2 col-span-1 md:col-span-1 lg:col-span-1 h-full flex flex-col justify-end w-full text-2xl md:text-4xl 2xl:text-4xl font-bold leading-8 md:leading-11 2xl:leading-11">
                         <h5 className="">
                             Hello there!
                         </h5>
@@ -115,7 +115,7 @@ const About = () => {
                         <h5 className='text-xl md:text-2xl font-semibold'>
                             Experience
                         </h5>
-                        <div className='flex items-center gap-2 hover:text-hoverprimary text-sm md:text-base font-semibold cursor-pointer'
+                        <div className='flex items-center gap-2 hover:text-hoverprimary text-base md:text-base font-semibold cursor-pointer'
                             onClick={() => window.open('https://drive.google.com/file/d/1LjZlBRrozfplZm_leH7jH0wajzTJCPcJ/view?usp=drive_link', '_blank')}
                         >
                             <p>resume</p>
@@ -126,7 +126,7 @@ const About = () => {
                     {experiences.map((exp, index)=> (
                         <div key={index} className='mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 items-start mx-auto'>
                             <div className='flex items-center gap-3 h-auto'>
-                                <div className='bg-[#f2f2f2] h-auto p-2 rounded-xs border-2 border-foreground'>
+                                <div className='bg-[#f2f2f2] h-auto p-2 rounded-xs'>
                                     <Image height={200}  width={200} src={exp.icon} alt={exp.name} className='object-cover w-7 md:w-6 h-7 md:h-6' />
                                 </div>
                                 <div>

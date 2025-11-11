@@ -37,6 +37,7 @@ body {
 	--portfoliotext: theme(--color-gray-600);
 	--bigtext: #a0a0a0;
 	--navbar-background: #f2f2f2;
+	--navbarshadow: theme(--shadow-lg);
 	--image-background: #d9d9d9;
 }
 
@@ -50,6 +51,7 @@ body {
 	--portfoliotext: theme(--color-gray-400);
 	--bigtext: #333333;
 	--navbar-background: #000000;
+	--navbarshadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 	--image-background: #d9d9d9;
 }
 
@@ -66,12 +68,16 @@ body {
 	--color-image-background: var(--image-background);
 	--color-hoverprimary: #46256A;
 
+	--shadow-navbar: var(--navbarshadow)
 	/* fonts  */
 	--font-lilita: "Lilita One", sans-serif;
 	--font-rubik: "Rubik", sans-serif;
 	--font-spline: "Spline Sans", sans-serif;
 	--font-clashdisplay: "Clash Display Variable", sans-serif;
 	--font-stacknosh: "Stack Sans Notch", sans-serif;
+
+	--breakpoint-3xl: 1600px;
+  	--breakpoint-4xl: 2000px;
 }
 
 

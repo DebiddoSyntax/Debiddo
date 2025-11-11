@@ -5,11 +5,13 @@ import Skills from './reusable/Skills';
 import Link from 'next/link';
 import { useIsVisible } from 'react-is-visible'
 import hashtags from '../../src/assets/projects-thumbnails/HashtagsMerch.webp'
+import aftrieuro from '../../src/assets/projects-thumbnails/aftrieuro.webp'
 import { CgPerformance } from "react-icons/cg";
 import { FaRegFileCode } from "react-icons/fa6";
 import { SiMaterialdesignicons } from "react-icons/si";
 import { MdOutlinePerson3 } from "react-icons/md";
 import ProjectCard from './reusable/ProjectCard';
+import ProjectCards from './reusable/ProjectCards';
 import Lottie from "lottie-react";
 import animationData from "../../public/background.json";
 // import ParticlesContainer from './reusable/Particles';
@@ -46,20 +48,23 @@ const Home = () => {
     const WelcomeRef = useRef()
     const FeaturedRef = useRef()
     const homeERef = useRef()
+    const AftrieruroRef = useRef()
 
     // IntersectionObserver useIsVisible
     const WelcomeRefisVisible = useIsVisible(WelcomeRef, { once: true })
     const FeaturedRefisVisible = useIsVisible(FeaturedRef, { once: true })
     const homeERefisVisible = useIsVisible(homeERef, { once: true })
+    const AftrieruroRefisVisible = useIsVisible(AftrieruroRef, { once: true })
 
     // image loaded state 
     const [homeELoaded, setHomeELoaded] = useState(false)
+    const [AftrieruroLoaded, setAftrieruroLoaded] = useState(false)
 
 
     return (
         <div>
             {/* hero section  */}
-            <div className='relative bg-navbar-background min-h-[800px] h-full px-5 md:px-10 lg:px-20 pt-20 pb-0 md:pb-20 mb-0'>
+            <div className='relative bg-navbar-background min-h-screen sm:min-h-[800px] h-full px-5 md:px-10 lg:px-20 pt-20 pb-0 md:pb-20 mb-0'>
                 <div className='absolute top-5 sm:top-20 md:top-20 2xl:top-5 left-0 w-full h-full z-0'>
                     <Lottie
                         animationData={animationData}
@@ -105,25 +110,39 @@ const Home = () => {
                     ${FeaturedRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} 
                     ref={FeaturedRef}
                 >
-                    {/* <h1 className='text-[8.3vw] sm:text-[8.3vw] md:text-[8.3vw] lg:text-[7.9vw] xl:text-[8.25vw] font-rubik text-[#7777] w-full font-extrabold'> */}
-                    <h1 className='text-[7.5vw] sm:text-[7.9vw] md:text-[7.5vw] lg:text-[7.2vw] xl:text-[7.5vw] 2xl:text-[7.7vw] font-rubik text-bigtext w-full font-extrabold'>
-                        FEATURED PROJECT
+                    <h1 className='text-[1.6rem] sm:text-[3rem] md:text-[3.5rem] lg:text-[4.4rem] xl:text-[5.5rem] 2xl:text-[6rem] 3xl:text-[12rem] text-center md:text-center font-rubik text-bigtext w-full font-extrabold'>
+                        FEATURED PROJECTS
                     </h1>
                 </div>
             
-                {/* home card  */}
-                <ProjectCard 
-                    IsVisibleRef={homeERefisVisible} 
-                    ProjectRef={homeERef} 
-                    LoadedState={homeELoaded} 
-                    setLoadedState={setHomeELoaded} 
-                    ProjectName={'Hashtags Merch'} 
-                    ProjectLink={'https://hashtagsmerch.vercel.app/'} 
-                    ProjectSRC={hashtags} 
-                    ButtonText={'View live website'}
-                    PageLink={true} 
-                    LinkTo={'/hashtags'}
-                />
+                <div className='grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 2xl:gap-16'>
+                    {/* home card  */}
+                    <ProjectCards 
+                        IsVisibleRef={homeERefisVisible} 
+                        ProjectRef={homeERef} 
+                        LoadedState={homeELoaded} 
+                        setLoadedState={setHomeELoaded} 
+                        ProjectName={'Hashtags Merch'} 
+                        ProjectLink={'https://hashtagsmerch.vercel.app/'} 
+                        ProjectSRC={hashtags} 
+                        ButtonText={'View live website'}
+                        PageLink={true} 
+                        LinkTo={'/hashtags'}
+                    />
+
+                    <ProjectCards
+                        IsVisibleRef={AftrieruroRefisVisible} 
+                        ProjectRef={AftrieruroRef} 
+                        LoadedState={AftrieruroLoaded} 
+                        setLoadedState={setAftrieruroLoaded} 
+                        ProjectName={'Aftrieuro Dynamics LTD'} 
+                        ProjectLink={'https://aftrieurodynamics.com/'} 
+                        ProjectSRC={aftrieuro} 
+                        ButtonText={'View live website'}
+                        PageLink={true} 
+                        LinkTo={'/aftrieuro'}
+                    />
+                </div>
 
                 <div className='my-16 md:my-20 xl:my-28 text-center'>
                     <Link href="/projects">

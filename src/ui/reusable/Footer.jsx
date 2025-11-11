@@ -4,6 +4,8 @@ import { FiExternalLink } from "react-icons/fi";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useDarkMode } from "@/functions/DarkModeContext";
+import footer from '../../../public/footer.webp'
+import footer2 from '../../../public/footer2.webp'
 
 
 
@@ -18,12 +20,13 @@ const Footer = () => {
     
     const LogoSRC = () => {
 		if (mounted && isDarkMode) {
-			return '/LogoWhite.png';
+			return '/LogoWhite.webp';
 		} else {
-			return '/LogoBlack.png';
+			return '/LogoBlack.webp';
 		}
 	};
 
+    
     return (
         <div className='bg-navbar-background pt-14 md:pt-20 pb-0 h-auto overflow-hidden' >
             <div className='px-5 md:px-10 lg:px-20 grid grid-cols-1 md:grid-cols-3 items-start mb-10 '>
@@ -93,17 +96,14 @@ const Footer = () => {
                 </div>
                 
             </div>
-            <div className='mt-5 md:mt-40 mb-0'>
-                {/* <p className='text-[11.5vw] font-rubik text-[#7777] font-extrabold rotate-6'> */}
-                <p className='text-[10.3vw] font-rubik text-[#7777] font-extrabold rotate-0 leading-3 md:leading-7 xl:leading-12'>
-                    DEBIDDOSYNTAX
-                </p>
+
+            <div className='mt-20 md:mt-32 xl:mt-56 mb-0 relative overflow-visible'>
+                <Image 
+                    src={isDarkMode ? footer : footer2} 
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 w-[150%] h-auto object-cover" 
+                    alt="Footer" 
+                />
             </div>
-            {/* <div className='mt-5 md:mt-10 mb-5'>
-                <p className='text-[10.3vw] font-rubik text-[#7777] font-extrabold rotate-6'>
-                    DEBIDDOSYNTAX
-                </p>
-            </div> */}
         </div>
     )
 }

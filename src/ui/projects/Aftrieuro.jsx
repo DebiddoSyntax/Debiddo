@@ -35,7 +35,7 @@ function Aftrieuro() {
                     </p>
                     <p className='mt-1 text-sm md:text-base xl:text-lg font-semibold xl:font-medium text-portfoliotext-lower leading-7 md:leading-8 xl:leading-8'>
                         Aftrieuro is a booking and consultation platform created to support companies aiming to expand into international markets, with a particular focus on Africa and Europe. 
-                        The platform connects businesses with expert consultants who provide market insights, strategic advice, and tailored growth solutions. 
+                        The platform connects businesses with Aftrieuro expert consultant who provide market insights, strategic advice, and tailored growth solutions. 
                         Through Aftrieuro, users can easily schedule consultations, manage appointments, and access resources that simplify cross-border expansion.
                     </p>
                 </div>

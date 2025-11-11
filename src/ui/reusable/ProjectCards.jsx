@@ -11,7 +11,7 @@ function ProjectCards({ IsVisibleRef, ProjectRef, LoadedState, setLoadedState, P
         >
             {!PageLink ? (
                 <>
-                <div className='h-72 md:h-[420px] lg:h-[480px] xl:h-[420px]'>
+                <div className='h-56 md:h-[380px] lg:h-[480px] xl:h-[420px]'>
                     <Image 
                         height={2000}  
                         width={2000} 
@@ -24,7 +24,7 @@ function ProjectCards({ IsVisibleRef, ProjectRef, LoadedState, setLoadedState, P
                 </>
             ) : (
                 <Link href={LinkTo}>
-                    <div className='h-72 md:h-[420px] lg:h-[480px] xl:h-[420px]'>
+                    <div className='h-56 md:h-[380px] lg:h-[480px] xl:h-[420px]'>
                         <Image 
                             height={2000}  
                             width={2000} 
