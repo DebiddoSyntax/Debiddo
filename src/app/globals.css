@@ -39,6 +39,7 @@ body {
 	--navbar-background: #f2f2f2;
 	--navbarshadow: theme(--shadow-lg);
 	--image-background: #d9d9d9;
+	--inputbg: #ffffff;
 }
 
 
@@ -53,6 +54,7 @@ body {
 	--navbar-background: #000000;
 	--navbarshadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 	--image-background: #d9d9d9;
+	--inputbg: theme(--color-gray-300);
 }
 
 
@@ -67,8 +69,10 @@ body {
 	--color-navbar-background: var(--navbar-background);
 	--color-image-background: var(--image-background);
 	--color-hoverprimary: #46256A;
+	--color-inputbg: var(----inputbg);
 
-	--shadow-navbar: var(--navbarshadow)
+	--shadow-navbar: var(--navbarshadow);
+	
 	/* fonts  */
 	--font-lilita: "Lilita One", sans-serif;
 	--font-rubik: "Rubik", sans-serif;

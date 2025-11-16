@@ -81,7 +81,7 @@ function Contact() {
                                 <input type="firstname"
                                     id="firstname"
                                     placeholder='Enter first name'
-                                    className=" w-full p-3 border-0 border-gray-300 rounded-md focus:outline-2 focus:border-0 focus:placeholder:opacity-0 focus:outline-none placeholder:text-sm md:placeholder:text-sm bg-bigtext"
+                                    className=" w-full p-3 border-0 border-gray-300 rounded-md focus:outline-2 focus:border-0 focus:placeholder:opacity-0 focus:outline-none placeholder:text-sm md:placeholder:text-sm bg-inputbg"
                                     {...register('first_name')}
                                 />
                                 <p className="text-red-700 text-sm mt-2">
@@ -98,7 +98,7 @@ function Contact() {
                                 <input type="lastname"
                                     id="lastname"
                                     placeholder='Enter last name'
-                                    className=" w-full p-3 border-0 border-gray-300 rounded-md focus:outline-2 focus:border-0 focus:placeholder:opacity-0 focus:outline-none placeholder:text-sm md:placeholder:text-sm bg-bigtext"
+                                    className=" w-full p-3 border-0 border-gray-300 rounded-md focus:outline-2 focus:border-0 focus:placeholder:opacity-0 focus:outline-none placeholder:text-sm md:placeholder:text-sm bg-inputbg"
                                     {...register('last_name')}
                                 />
                                 <p className="text-red-700 text-sm mt-2">
@@ -113,7 +113,7 @@ function Contact() {
                                 id="email"
                                 autoComplete='on'
                                 placeholder='Enter your email'
-                                className=" w-full p-3 border-0 border-gray-300 rounded-md focus:outline-2 focus:border-0 focus:placeholder:opacity-0 focus:outline-none placeholder:text-sm md:placeholder:text-sm bg-bigtext"
+                                className=" w-full p-3 border-0 border-gray-300 rounded-md focus:outline-2 focus:border-0 focus:placeholder:opacity-0 focus:outline-none placeholder:text-sm md:placeholder:text-sm bg-inputbg"
                                 {...register('email')}
                             />
                             <p className="text-red-700 text-sm mt-2">
@@ -129,7 +129,7 @@ function Contact() {
                                 <textarea
                                     id="message"
                                     placeholder="Message"
-                                    className="w-full h-40 p-3 border-0 border-gray-300 rounded-md focus:border-primary focus:placeholder:opacity-0  focus:ring-primary focus:outline-none placeholder:text-sm resize-none bg-bigtext"
+                                    className="w-full h-40 p-3 border-0 border-gray-300 rounded-md focus:border-primary focus:placeholder:opacity-0  focus:ring-primary focus:outline-none placeholder:text-sm resize-none bg-inputbg"
                                     {...register('message')}
                                 ></textarea>
                             </div>
@@ -152,7 +152,7 @@ function Contact() {
                             <h3 className="text-2xl md:text-2xl lg:text-3xl leading-[30px] md:leading-10 lg:leading-[52px] font-bold">
                                 Sent
                             </h3>
-                            <p className="mt-5 text-base text-gray-200 w-full">
+                            <p className="mt-5 text-base w-full">
                                 Thank you for contacting me, I will get back to you soon.
                             </p>
                             <FaSquareCheck className='mt-5 text-primary text-4xl md:text-5xl mx-auto'/>
