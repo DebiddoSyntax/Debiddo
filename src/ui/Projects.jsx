@@ -106,7 +106,7 @@ const Projects = () => {
                 />
 
 
-                <ProjectCards 
+                {/* <ProjectCards 
                     IsVisibleRef={UntamedERefisVisible} 
                     ProjectRef={UntamedERef} 
                     LoadedState={UntamedELoaded} 
@@ -115,7 +115,7 @@ const Projects = () => {
                     ProjectLink={'https://untamedcheck.netlify.app/'} 
                     ProjectSRC={Untamed} 
                     ButtonText={'View live website'}
-                />
+                /> */}
 
                 <ProjectCards 
                     IsVisibleRef={AnimedebRefisVisible} 
