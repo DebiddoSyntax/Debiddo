@@ -2,9 +2,10 @@
 import { useRef } from 'react'
 import { useIsVisible } from 'react-is-visible'
 import Image from 'next/image'
-import David from '../assets/about/David.jpg'
+import David from '../assets/about/David.webp'
 import aftrieuroLogo from '@/assets/icons/aftrieuroLogo.webp'
 import hashtagsLogo from '@/assets/icons/hashtagsLogo.webp'
+import relaychat from '@/assets/icons/relaychat.webp'
 import { LiaExternalLinkAltSolid } from "react-icons/lia";
 
 
@@ -57,6 +58,17 @@ const About = () => {
     const experiences = [
 
         {
+            name: 'RelayChat',
+            icon: relaychat,
+            period: 'Nov, 2025 - March, 2026',
+            text: `
+                Led the development of a real-time chat application with private messaging, group chats, and voice/video calling. 
+                Built a responsive interface using React and Tailwind CSS, with Zustand for efficient state management. 
+                Implemented WebSocket-based messaging, streaming AI responses, and WebRTC calls with real-time alerts and structured call states. 
+                Ensured secure authentication and optimized performance through scalable component architecture.
+            `
+        },
+        {
             name: 'Hashtags Merch',
             icon: hashtagsLogo,
             period: 'August, 2025 - Nov, 2025',
@@ -89,7 +101,7 @@ const About = () => {
                 ${DavidRefisVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-20'}`} 
                 ref={DavidRef}
             >
-                <div className="mt-16 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-end justify-items-center mx-auto w-full md:w-full lg:w-[80%] xl:w-[70%] 2xl:w-[57%] max-w-7xl">
+                <div className="mt-16 mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 items-end justify-items-center mx-auto w-full md:w-full lg:w-[80%] xl:w-[70%] 2xl:w-[50%] max-w-7xl">
                     <div className="order-2 md:order-1 w-full h-full px-0 py-0 bg-navbar-background">
                         <div className="w-full h-[480px] sm:h-[620px] md:h-[480px] xl:h-[480px]">
                             <Image src={David} alt="David" className="w-full h-full object-fill" />
@@ -116,7 +128,7 @@ const About = () => {
                             Experience
                         </h5>
                         <div className='flex items-center gap-2 hover:text-hoverprimary text-base md:text-base font-semibold cursor-pointer'
-                            onClick={() => window.open('https://drive.google.com/file/d/19EYNzAwD3sl7x1jv9ipGlaFtzS0H1S8a/view', '_blank')}
+                            onClick={() => window.open('https://drive.google.com/file/d/1MgonsBo40_1VipGakYWO_wqSAwAYu4Gw/view', '_blank')}
                         >
                             <p>resume</p>
                             <LiaExternalLinkAltSolid />

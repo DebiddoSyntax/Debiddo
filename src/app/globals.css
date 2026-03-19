@@ -1,31 +1,8 @@
-/* @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap');
 @import "tailwindcss";
 
 
@@ -40,6 +17,7 @@ body {
 	--navbarshadow: theme(--shadow-lg);
 	--image-background: #d9d9d9;
 	--inputbg: #ffffff;
+	--icon-bg: theme(--color-gray-300);
 }
 
 
@@ -55,6 +33,7 @@ body {
 	--navbarshadow: 0 4px 10px rgba(255, 255, 255, 0.1);
 	--image-background: #d9d9d9;
 	--inputbg: #333333;
+	--icon-bg: theme(--color-gray-800);
 }
 
 
@@ -70,6 +49,7 @@ body {
 	--color-image-background: var(--image-background);
 	--color-hoverprimary: #46256A;
 	--color-inputbg: var(--inputbg);
+	--color-icon-bg: var(--icon-bg);
 
 	--shadow-navbar: var(--navbarshadow);
 	
@@ -89,6 +69,6 @@ body {
 body {
 	background: var(--background);
 	color: var(--foreground);
-	font-family: Arial, Helvetica, sans-serif;
-	/* transition: background 0.3s ease, color 0.3s ease; */
+	/* font-family:  ui-sans-serif, -apple-system, system-ui, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; */
+	font-family: "Inter", sans-serif;
 }

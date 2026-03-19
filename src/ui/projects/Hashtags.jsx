@@ -144,8 +144,10 @@ function Hashtags() {
                 <ProjectButton 
                     PrevProjectLink={'/aftrieuro'} 
                     PrevProjectName={'Aftrieuro'} 
-                    NextProject={false} 
+                    NextProject={true} 
                     PrevProject={true} 
+                    NextProjectLink={'/relaychat'} 
+                    NextProjectName={'Relaychat'}
                 />
             </div>
 

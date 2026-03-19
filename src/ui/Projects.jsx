@@ -4,7 +4,7 @@ import { useIsVisible } from 'react-is-visible'
 import crowdhelp from '../../src/assets/projects-thumbnails/Crowdhelp.webp'
 import HashtagSneaker from '../../src/assets/projects-thumbnails/HashtagsSneaker.webp'
 import Cryptofolio from '../../src/assets/projects-thumbnails/Cryptofolio.webp'
-import Untamed from '../../src/assets/projects-thumbnails/Untamed.webp'
+import relaychat from '@/assets/projects-thumbnails/relaychat.webp'
 import Animedeb from '../../src/assets/projects-thumbnails/Animedeb.webp'
 import aftrieuro from '../../src/assets/projects-thumbnails/aftrieuro.webp'
 import hashtags from '../../src/assets/projects-thumbnails/HashtagsMerch.webp'
@@ -16,7 +16,6 @@ import ProjectCards from './reusable/ProjectCards'
 const Projects = () => {
 
     // card refs 
-    const ProjectsRef = useRef()
     const hashtagsMerchRef = useRef()
     const AftrieruroRef = useRef()
     const DesignRef = useRef()
@@ -24,11 +23,11 @@ const Projects = () => {
     const CrowdHelpRef = useRef()
     const HashtagsRef = useRef()
     const CryptoFRef = useRef()
-    const UntamedERef = useRef()
+    const RelaychatRef = useRef()
     const AnimedebRef = useRef()
-
+    
     // IntersectionObserver useIsVisible 
-    const ProjectsRefisVisible = useIsVisible(ProjectsRef, { once: true })
+    const RelayChatRefisVisible = useIsVisible(RelaychatRef, { once: true })
     const hashtagsMerchRefisVisible = useIsVisible(hashtagsMerchRef, { once: true })
     const AftrieruroRefisVisible = useIsVisible(AftrieruroRef, { once: true })
     const DesignRefisVisible = useIsVisible(DesignRef, { once: true })
@@ -36,16 +35,15 @@ const Projects = () => {
     const CrowdHelpRefisVisible = useIsVisible(CrowdHelpRef, { once: true })
     const CryptoFRefisVisible = useIsVisible(CryptoFRef, { once: true })
     const HashtagsRefisVisible = useIsVisible(HashtagsRef, { once: true })
-    const UntamedERefisVisible = useIsVisible(UntamedERef, { once: true })
     const AnimedebRefisVisible = useIsVisible(AnimedebRef, { once: true })
 
     // image loaded state 
+    const [relayChatLoaded, setRelayChatLoaded] = useState(false)
     const [hashtagsMerchLoaded, setHashtagsMerchLoaded] = useState(false)
     const [AftrieruroLoaded, setAftrieruroLoaded] = useState(false)
     const [crowdhelpLoaded, setCrowdhelpLoaded] = useState(false)
     const [cryptoFolioLoaded, setCryptoFolioLoaded] = useState(false)
     const [hashtagsLoaded, setHashtagsLoaded] = useState(false)
-    const [UntamedELoaded, setUntamedELoaded] = useState(false)
     const [animedebLoaded, setAnimedebLoaded] = useState(false)
 
     
@@ -77,6 +75,19 @@ const Projects = () => {
 
             {/* cards  */}
             <div className='grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 2xl:gap-16'>
+
+                <ProjectCards 
+                    IsVisibleRef={RelayChatRefisVisible} 
+                    ProjectRef={RelaychatRef} 
+                    LoadedState={relayChatLoaded} 
+                    setLoadedState={setRelayChatLoaded} 
+                    ProjectName={'RelayChat'} 
+                    ProjectLink={'https://reelaychat.vercel.app/'} 
+                    ProjectSRC={relaychat} 
+                    ButtonText={'View live website'}
+                    PageLink={true} 
+                    LinkTo={'/relaychat'}
+                />
 
                 <ProjectCards 
                     IsVisibleRef={hashtagsMerchRefisVisible} 

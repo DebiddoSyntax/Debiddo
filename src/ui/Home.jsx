@@ -10,10 +10,10 @@ import { CgPerformance } from "react-icons/cg";
 import { FaRegFileCode } from "react-icons/fa6";
 import { SiMaterialdesignicons } from "react-icons/si";
 import { MdOutlinePerson3 } from "react-icons/md";
-import ProjectCard from './reusable/ProjectCard';
 import ProjectCards from './reusable/ProjectCards';
 import Lottie from "lottie-react";
 import animationData from "../../public/background.json";
+import relaychat from '@/assets/projects-thumbnails/relaychat.webp'
 // import ParticlesContainer from './reusable/Particles';
 
 
@@ -49,16 +49,19 @@ const Home = () => {
     const FeaturedRef = useRef()
     const homeERef = useRef()
     const AftrieruroRef = useRef()
+    const RelayChatRef = useRef()
 
     // IntersectionObserver useIsVisible
     const WelcomeRefisVisible = useIsVisible(WelcomeRef, { once: true })
     const FeaturedRefisVisible = useIsVisible(FeaturedRef, { once: true })
     const homeERefisVisible = useIsVisible(homeERef, { once: true })
     const AftrieruroRefisVisible = useIsVisible(AftrieruroRef, { once: true })
+    const RelayChatRefisVisible = useIsVisible(RelayChatRef, { once: true })
 
     // image loaded state 
     const [homeELoaded, setHomeELoaded] = useState(false)
     const [AftrieruroLoaded, setAftrieruroLoaded] = useState(false)
+    const [relayChatLoaded, setRelayChatLoaded] = useState(false)
 
 
     return (
@@ -97,7 +100,7 @@ const Home = () => {
                     </div>
 
                     <button 
-                        onClick={() => window.open('https://cal.com/david-michael-zutofh/debiddo', '_blank')}
+                        onClick={() => window.open('https://cal.com/debiddo/15min', '_blank')}
                         className='cursor-pointer mt-20 md:mt-24 xl:mt-48 w-52 lg:w-64 text-base lg:text-lg px-5 md:px-8 lg:px-10 py-4 md:py-5 bg-primary text-white hover:bg-hoverprimary rounded-sm font-semibold'>
                         Schedule a call
                     </button>
@@ -118,6 +121,19 @@ const Home = () => {
                 <div className='grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 2xl:gap-16'>
                     {/* home card  */}
                     <ProjectCards 
+                        IsVisibleRef={RelayChatRefisVisible} 
+                        ProjectRef={RelayChatRef} 
+                        LoadedState={relayChatLoaded} 
+                        setLoadedState={setRelayChatLoaded} 
+                        ProjectName={'RelayChat'} 
+                        ProjectLink={'https://reelaychat.vercel.app/'} 
+                        ProjectSRC={relaychat} 
+                        ButtonText={'View live website'}
+                        PageLink={true} 
+                        LinkTo={'/relaychat'}
+                    />
+
+                    <ProjectCards 
                         IsVisibleRef={homeERefisVisible} 
                         ProjectRef={homeERef} 
                         LoadedState={homeELoaded} 
@@ -130,7 +146,7 @@ const Home = () => {
                         LinkTo={'/hashtags'}
                     />
 
-                    <ProjectCards
+                    {/* <ProjectCards
                         IsVisibleRef={AftrieruroRefisVisible} 
                         ProjectRef={AftrieruroRef} 
                         LoadedState={AftrieruroLoaded} 
@@ -141,7 +157,7 @@ const Home = () => {
                         ButtonText={'View live website'}
                         PageLink={true} 
                         LinkTo={'/aftrieuro'}
-                    />
+                    /> */}
                 </div>
 
                 <div className='my-16 md:my-20 xl:my-28 text-center'>
@@ -161,7 +177,7 @@ const Home = () => {
             {/* resume section  */}
             <div className='flex justify-between items-center w-full mt-0 py-20 md:py-32 xl:py-40'>
                 <button className='flex justify-between items-center text-center mx-auto py-4 px-14 rounded-sm bg-primary hover:bg-hoverprimary text-base md:text-lg text-white font-semibold cursor-pointer' 
-                    onClick={() => window.open('https://drive.google.com/file/d/19EYNzAwD3sl7x1jv9ipGlaFtzS0H1S8a/view', '_blank')}
+                    onClick={() => window.open('https://drive.google.com/file/d/1MgonsBo40_1VipGakYWO_wqSAwAYu4Gw/view', '_blank')}
                 >
                     My Resume 
                     <HiOutlineArrowDownTray className='ml-3 mr-0 text-xl stroke-[3px]' />

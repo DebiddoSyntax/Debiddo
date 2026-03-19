@@ -17,6 +17,7 @@ function VideoFile({ title, fileLink }) {
                     muted
                     loop
                     playsInline
+                    controls
                 />
             </div>
         </div>
