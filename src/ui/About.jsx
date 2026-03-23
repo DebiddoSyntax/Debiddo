@@ -128,7 +128,7 @@ const About = () => {
                             Experience
                         </h5>
                         <div className='flex items-center gap-2 hover:text-hoverprimary text-base md:text-base font-semibold cursor-pointer'
-                            onClick={() => window.open('https://drive.google.com/file/d/1MgonsBo40_1VipGakYWO_wqSAwAYu4Gw/view', '_blank')}
+                            onClick={() => window.open('https://drive.google.com/file/d/1n1fIh_Z_fskJcgtSaOxayBp10jl0HnAV/view', '_blank')}
                         >
                             <p>resume</p>
                             <LiaExternalLinkAltSolid />
